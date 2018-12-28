@@ -1,0 +1,135 @@
+.root {
+  border-radius: 50%;
+  height: 224px;
+  margin: 0 auto;
+  margin-top: -112px;
+  position: relative;
+  top: 50%;
+  width: 224px;
+}
+
+.base {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.corner {
+  background: #191919;
+  box-shadow: inset 0 2px 1px rgba(#000, 0.3);
+  height: 108px;
+  position: absolute;
+  transition: all 0.1s;
+  width: 108px;
+}
+
+.corner:not(.active) {
+  background: #191919;
+  box-shadow: inset 0 2px 1px rgba(#000, 0.3);
+}
+
+.corner.top.left {
+  border-radius: 100% 0 0 0;
+  left: 0;
+}
+
+.corner.top.right {
+  border-radius: 0 100% 0 0;
+  right: 0;
+}
+
+.corner.bottom {
+  bottom: 0;
+}
+
+.corner.bottom.left {
+  border-radius: 0 0 0 100%;
+  left: 0;
+}
+
+.corner.bottom.right {
+  border-radius: 0 0 100% 0;
+  right: 0;
+}
+
+.active {
+  background: red;
+  box-shadow: inset 0 2px 1px rgba(#000, 0.5), inset 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.joystick {
+  background: red;
+  background: #0f0f11;
+  background: linear-gradient(45deg, #0f0f11 0%, #47474b 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 1px rgba(#fff, 0.4), 0 2px 3px rgba(#000, 0.7);
+  height: 182px;
+  left: 21px;
+  position: absolute;
+  top: 21px;
+  width: 182px;
+}
+
+.inner {
+  background: #191919;
+  background: linear-gradient(45deg, #303031 0%, #161515 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 1px rgba(#fff, 0.2);
+  height: 172px;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+  width: 172px;
+}
+
+.roller {
+  background: #131313;
+  background: radial-gradient(ellipse at center, #313131 0%, #131313 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgba(#000, 1), 0 1px 1px rgba(#fff, 0.1);
+  height: 120px;
+  left: 26px;
+  position: absolute;
+  top: 26px;
+  width: 120px;
+}
+
+.stick {
+  background: #0f0f11;
+  background: linear-gradient(180deg, #1e1e1e 0%, #677072 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(#000, 0.8), 0 8px 8px rgba(#000, 0.6);
+  height: 80px;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  transition: all 0.1s;
+  width: 80px;
+}
+
+.stick.left {
+  left: 0;
+}
+
+.stick.right {
+  left: 40px;
+}
+
+.stick.up {
+  top: 0;
+}
+
+.stick.down {
+  top: 40px;
+}
+
+.stick .inner {
+  background: radial-gradient(ellipse at center, #3a3939 0%, #131313 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 2px rgba(#000, 1), 0 1px 1px rgba(#fff, 0.1);
+  height: 68px;
+  left: 6px;
+  position: absolute;
+  top: 6px;
+  width: 68px;
+}

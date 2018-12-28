@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './App.module.css';
-import ledManager from '../../ledManager';
+import ledManager from '../../stores/ledManager';
 
 import Box from '../../components/Box';
 import Matrix from '../../components/Matrix';
 import Ball from '../../components/Ball';
+import Joystick from '../../components/Joystick';
 
 class App extends React.Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class App extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
+          <Joystick />
           <Box>
             <Matrix>
               <Ball />
