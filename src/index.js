@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'mobx-react';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './containers/App/App';
+import ledManager from './ledManager';
+import leds from './leds';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const stores = {
+  led: ledManager,
+  leds,
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <Provider {...stores}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);

@@ -1,0 +1,19 @@
+.root {
+  --size: 40vw;
+
+  height: var(--size);
+  perspective-origin: 22.5% -270px;
+  position: relative;
+  transform-style: preserve-3d;
+  width: var(--size);
+}
+
+.grid {
+  border: calc(var(--size) / 20) solid black;
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+  grid-template-rows: repeat(32, 1fr);
+  height: 100%;
+  transform: rotateX(90deg);
+  width: 100%;
+}

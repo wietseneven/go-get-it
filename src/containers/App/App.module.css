@@ -1,0 +1,9 @@
+.root {
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}

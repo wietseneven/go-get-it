@@ -1,0 +1,4 @@
+.root {
+  perspective: 1250px;
+  perspective-origin: 45% -200px;
+}
